@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n, presentCount = 0;
+    char attendance[50];
+
+    // Input number of students
+    printf("Enter total number of students: ");
+    scanf("%d", &n);
+
+    // Input attendance for each student (P for present, A for absent)
+    printf("Enter attendance (P for present, A for absent) for each student:\n");
+    for(int i = 0; i < n; i++) {
+        printf("Student %d: ", i + 1);
+        scanf(" %c", &attendance[i]); // notice the space before %c
+        if(attendance[i] == 'P' || attendance[i] == 'p') {
+            presentCount++;
+        }
+    }
+
+    // Display result
+    printf("\nNumber of students present = %d\n", presentCount);
+
+    return 0;
+}
