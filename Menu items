@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int choice;
+    
+    // Display the menu
+    printf("---- Welcome to the Cafe ----\n");
+    printf("1. Coffee - $2.50\n");
+    printf("2. Tea - $1.50\n");
+    printf("3. Sandwich - $5.00\n");
+    printf("4. Cake - $3.00\n");
+    printf("5. Exit\n");
+    
+    // Ask user to select an item
+    printf("Enter your choice (1-5): ");
+    scanf("%d", &choice);
+    
+    // Use switch case to process the choice
+    switch(choice) {
+        case 1:
+            printf("You selected Coffee. Please pay $2.50\n");
+            break;
+        case 2:
+            printf("You selected Tea. Please pay $1.50\n");
+            break;
+        case 3:
+            printf("You selected Sandwich. Please pay $5.00\n");
+            break;
+        case 4:
+            printf("You selected Cake. Please pay $3.00\n");
+            break;
+        case 5:
+            printf("Thank you! Come again.\n");
+            break;
+        default:
+            printf("Invalid choice! Please select a valid option.\n");
+    }
+
+    return 0;
+}
