@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    float purchaseAmount;
+    float discount = 0.0;
+
+    // Ask the user for the purchase amount
+    printf("Enter the purchase amount: $");
+    scanf("%f", &purchaseAmount);
+
+    // Check discount conditions
+    if (purchaseAmount >= 100) {
+        discount = 10;  // 10% discount for purchases >= $100
+        printf("You are eligible for a %.0f%% discount!\n", discount);
+    } else if (purchaseAmount >= 50) {
+        discount = 5;   // 5% discount for purchases >= $50
+        printf("You are eligible for a %.0f%% discount!\n", discount);
+    } else {
+        printf("Sorry, no discount for purchases under $50.\n");
+    }
+
+    // Calculate the final price
+    float finalPrice = purchaseAmount - (purchaseAmount * discount / 100);
+    printf("Your final price is: $%.2f\n", finalPrice);
+
+    return 0;
+}
