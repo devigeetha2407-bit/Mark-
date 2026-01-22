@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    float costPrice, sellingPrice, amount;
+
+    // Ask user for cost price and selling price
+    printf("Enter the cost price: $");
+    scanf("%f", &costPrice);
+
+    printf("Enter the selling price: $");
+    scanf("%f", &sellingPrice);
+
+    // Calculate profit or loss
+    if (sellingPrice > costPrice) {
+        amount = sellingPrice - costPrice;
+        printf("You made a profit of $%.2f\n", amount);
+    } else if (sellingPrice < costPrice) {
+        amount = costPrice - sellingPrice;
+        printf("You incurred a loss of $%.2f\n", amount);
+    } else {
+        printf("No profit, no loss. You broke even.\n");
+    }
+
+    return 0;
+}
+price
