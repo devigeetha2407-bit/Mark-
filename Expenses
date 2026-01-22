@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    float expense[50], total = 0;
+
+    // Input number of expense items
+    printf("Enter number of expense items: ");
+    scanf("%d", &n);
+
+    // Input expense amounts
+    for(int i = 0; i < n; i++) {
+        printf("Enter amount for expense item %d: ", i + 1);
+        scanf("%f", &expense[i]);
+        total += expense[i];
+    }
+
+    // Display total monthly expenses
+    printf("\nTotal Monthly Expenses = %.2f\n", total);
+
+    return 0;
+}
