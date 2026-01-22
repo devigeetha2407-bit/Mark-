@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+// Function to calculate total bill
+float calculateBill(float price[], int qty[], int n) {
+    float total = 0;
+    for(int i = 0; i < n; i++) {
+        total += price[i] * qty[i];
+    }
+    return total;
+}
+
+int main() {
+    int n;
+    
+    // Input number of items
+    printf("Enter number of items: ");
+    scanf("%d", &n);
+
+    float price[n];
+    int qty[n];
+
+    // Input price and quantity for each item
+    for(int i = 0; i < n; i++) {
+        printf("Enter price of item %d: ", i + 1);
+        scanf("%f", &price[i]);
+        printf("Enter quantity of item %d: ", i + 1);
+        scanf("%d", &qty[i]);
+    }
+
+    // Calculate total bill using function
+    float total = calculateBill(price, qty, n);
+
+    // Display total bill
+    printf("\nTotal Bill = %.2f\n", total);
+
+    return 0;
+}
