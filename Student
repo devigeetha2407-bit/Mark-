@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    // Input number of students
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    // Display total number of students
+    printf("Total number of students = %d\n", n);
+
+    return 0;
+}
