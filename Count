@@ -1,0 +1,31 @@
+# <stdio.h>
+
+// Define structure
+struct Student {
+    int rollNo;
+    char name[30];
+};
+
+int main() {
+    int n, i;
+
+    printf("Enter number of records: ");
+    scanf("%d", &n);
+
+    struct Student s[n];   // Array of structures
+
+    // Input records
+    for(i = 0; i < n; i++) {
+        printf("\nEnter details for student %d\n", i + 1);
+        printf("Roll Number: ");
+        scanf("%d", &s[i].rollNo);
+
+        printf("Name: ");
+        scanf("%s", s[i].name);
+    }
+
+    // Display count of records
+    printf("\nTotal number of records stored = %d\n", n);
+
+    return 0;
+}
