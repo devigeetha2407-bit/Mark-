@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+// Define structure for login credentials
+struct Login {
+    char username[30];
+    char password[30];
+};
+
+int main() {
+    struct Login user;
+
+    // Store username and password
+    strcpy(user.username, "admin");
+    strcpy(user.password, "1234");
+
+    char uname[30], pass[30];
+
+    // Input credentials from user
+    printf("Enter Username: ");
+    scanf("%s", uname);
+
+    printf("Enter Password: ");
+    scanf("%s", pass);
+
+    // Verify login
+    if(strcmp(uname, user.username) == 0 && strcmp(pass, user.password) == 0) {
+        printf("Login Successful!\n");
+    } else {
+        printf("Login Failed! Invalid Username or Password.\n");
+    }
+
+    return 0;
+}
